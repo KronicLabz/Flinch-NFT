@@ -82,7 +82,7 @@ contract FlinchNFT is ERC721A, Ownable{
     function teamMint() external onlyOwner{
         require(!teamMinted, "Flinch NFT :: Crew has already grabbed the loot!");
         teamMinted = true;
-        _safeMint(msg.sender, 0);
+        _safeMint(msg.sender, 250);
     }
 
     function _baseURI() internal view virtual override returns (string memory) {
