@@ -139,7 +139,7 @@ contract FlinchNFT is ERC721A, Ownable{
         uint256 withdrawAmount_25 = address(this).balance * 25/100;
         //5% to project/Community Wallet
         uint256 withdrawAmount_5 = address(this).balance  * 5/100;
-        payable(0x714054B641f7DF0FA62f1cb5Ca74A249c74Fb698).transfer(withdrawAmount_70);
+        payable(0x1333e81C131e1D1D0E8Bd42ecA5E45aCd0cE1De3).transfer(withdrawAmount_70);
         payable(0x08bDc77727433Bb7507D782Cb1a4aBa35987659f).transfer(withdrawAmount_25);
         payable(0x10C8C5F712101d1C285C7DF88b777565ED9C7431).transfer(withdrawAmount_5);
         payable(msg.sender).transfer(address(this).balance);
