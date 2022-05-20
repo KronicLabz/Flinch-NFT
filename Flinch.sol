@@ -26,10 +26,10 @@ contract FlinchNFT is ERC721A, Ownable{
     using Strings for uint256;
 
     uint256 public constant MAX_SUPPLY = 9999;
-    uint256 public constant MAX_PUBLIC_MINT = 5;
+    uint256 public constant MAX_PUBLIC_MINT = 6;
     uint256 public constant MAX_HITLIST_MINT = 3;
-    uint256 public constant PUBLIC_SALE_PRICE = .1 ether;
-    uint256 public constant HITLIST_SALE_PRICE = .06 ether;
+    uint256 public constant PUBLIC_SALE_PRICE = .09 ether;
+    uint256 public constant HITLIST_SALE_PRICE = .07 ether;
 
     string private  baseTokenUri;
     string public   placeholderTokenUri;
