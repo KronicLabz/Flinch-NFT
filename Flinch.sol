@@ -102,6 +102,16 @@ contract FlinchNFT is ERC721A, Ownable{
         return bytes(baseTokenUri).length > 0 ? string(abi.encodePacked(baseTokenUri, trueId.toString(), ".json")) : "";
     }
 
+    // @dev walletOf() function shouldn't be called on-chain due to gas consumption
+    function walletOf() external view returns(uint256[] memory){
+        address _owner = msg.sender;
+        uint256 numberOfOwnedNFT = balanceOf(_owner);
+        uint256[] memory ownerIds = new uint256[](numberOfOwnedNFT);
+
+        for(uint256 index = 0; index < numberOfOwnedNFT; index++){}
+
+        return ownerIds;
+    }
     function setTokenUri(string memory _baseTokenUri) external onlyOwner{
         baseTokenUri = _baseTokenUri;
     }
