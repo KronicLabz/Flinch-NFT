@@ -143,15 +143,12 @@ contract FlinchNFT is ERC721A, Ownable{
         isRevealed = !isRevealed;
     }
       function withdraw() external onlyOwner{
-        //70% to utility/Flinch Franchise Project Wallet
-        uint256 withdrawAmount_70 = address(this).balance * 70/100;
-        //25% to inverstor/Ardor Pictures Wallet
-        uint256 withdrawAmount_25 = address(this).balance * 25/100;
-        //5% to project/Community Wallet
-        uint256 withdrawAmount_5 = address(this).balance  * 5/100;
-        payable(0x1333e81C131e1D1D0E8Bd42ecA5E45aCd0cE1De3).transfer(withdrawAmount_70);
-        payable(0x3587D4a1773D418B95f519c47dB972B939bC7611).transfer(withdrawAmount_25);
-        payable(0x10C8C5F712101d1C285C7DF88b777565ED9C7431).transfer(withdrawAmount_5);
+        //80% to utility/Flinch Franchise Project Wallet
+        uint256 withdrawAmount_80 = address(this).balance * 80/100;
+        //20% to inverstor/Ardor Pictures Wallet
+        uint256 withdrawAmount_20 = address(this).balance * 20/100;
+        payable(0x1333e81C131e1D1D0E8Bd42ecA5E45aCd0cE1De3).transfer(withdrawAmount_80);
+        payable(0x3587D4a1773D418B95f519c47dB972B939bC7611).transfer(withdrawAmount_20);
         payable(msg.sender).transfer(address(this).balance);
     }
 }
